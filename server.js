@@ -32,17 +32,6 @@ hbs.registerHelper('screamIt', (text)=>{
   return text.toLowerCase();
 });
 
-// app.get('/', (req, res)=>{
-//   // res.send('<h1>Hello Express!</h1>');
-//   res.send({
-//     name: 'Rabin',
-//     likes:[
-//       'Hiking',
-//       'Biking',
-//       'Cities'
-//     ]
-//   });
-// });
 
 app.get('/', (req, res)=>{
   res.render('home.hbs', {
@@ -54,6 +43,12 @@ app.get('/', (req, res)=>{
 app.get('/about', (req, res)=>{
   res.render('about.hbs', {
     pageTitle: 'About Page'
+  });
+});
+
+app.get('/Projects', (req, res)=>{
+  res.render('projects.hbs', {
+    pageTitle: 'Project Portfolio'
   });
 });
 
